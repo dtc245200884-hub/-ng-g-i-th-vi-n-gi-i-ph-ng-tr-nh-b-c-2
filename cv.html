@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Phương Trình Bậc 2 - CodeGym</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                
+                <!-- Card Container -->
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-header bg-success text-white py-3 rounded-top-4">
+                        <h4 class="mb-0 fw-semibold text-center">
+                            <i class="fa-solid fa-calculator me-2"></i> Giải Phương Trình Bậc 2 ($ax^2 + bx + c = 0$)
+                        </h4>
+                    </div>
+                    
+                    <div class="card-body p-4 p-md-5">
+                        <form action="solve" method="post">
+                            <!-- Input a -->
+                            <div class="mb-3">
+                                <label for="a" class="form-label fw-bold text-secondary">Hệ số a</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light">a =</span>
+                                    <input type="number" step="any" class="form-control" id="a" name="a" placeholder="Nhập số a..." required>
+                                </div>
+                            </div>
+
+                            <!-- Input b -->
+                            <div class="mb-3">
+                                <label for="b" class="form-label fw-bold text-secondary">Hệ số b</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light">b =</span>
+                                    <input type="number" step="any" class="form-control" id="b" name="b" placeholder="Nhập số b..." required>
+                                </div>
+                            </div>
+
+                            <!-- Input c -->
+                            <div class="mb-4">
+                                <label for="c" class="form-label fw-bold text-secondary">Hệ số c</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light">c =</span>
+                                    <input type="number" step="any" class="form-control" id="c" name="c" placeholder="Nhập số c..." required>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success py-2 rounded-pill shadow-sm fw-semibold">
+                                    <i class="fa-solid fa-play me-1"></i> Tính nghiệm
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Result Section (Hiển thị kết quả trả về từ Servlet/Thư viện) -->
+                        <div class="mt-4 p-3 border rounded-3 bg-light">
+                            <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-square-poll-vertical me-2 text-success"></i>Kết quả giải:</h6>
+                            <div class="text-secondary fst-italic">
+                                <!-- Ví dụ kết quả: Phương trình có 2 nghiệm phân biệt... -->
+                                ${result != null ? result : "Chưa có dữ liệu tính toán."}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
